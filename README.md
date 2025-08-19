@@ -42,8 +42,6 @@ SWITCH(
 )
 ```
 
----
-
 ## 2. Rank Text Transformation
 - Split **Rank Text** column by delimiter `"space"` to isolate ranking words (First, Second, … Sixth)  
 - Transformed the new column to **Capitalize Each Word** (First, Second, etc.)  
@@ -90,7 +88,7 @@ To display ranking order correctly:
 2. Go to **Modeling → Sort by Column**  
 3. Choose **Rank Number**  
 
-👉 This ensures the slicer shows *First → Sixth* in the correct order  
+This ensures the slicer shows *First → Sixth* in the correct order  
 
 ---
 
