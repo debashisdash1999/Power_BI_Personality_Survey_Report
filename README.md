@@ -105,7 +105,5 @@ This ensures the slicer shows *First → Sixth* in the correct order
 
 ---
 
-## Author
-**Debashis**
 ![Capture](https://github.com/user-attachments/assets/0030823d-7a58-40fc-b281-4c0956206751)
 
