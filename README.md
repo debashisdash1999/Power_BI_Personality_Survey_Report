@@ -24,23 +24,17 @@ The dashboard enables comparisons by **country, gender, and attribute preference
 
 ---
 
-## Data Transformation (Power Query & DAX)
+## Data Extraction and Transformation
 
-## 1. Conditional Column: `Attributes`
-Since the `Question` column had long text values, a new column `Attributes` was created:  
+### 1. Conditional Column: `Attributes`
+The `Question` column was too long, so a new column `Attributes` was created with simplified values:
 
-```DAX
-Attributes = 
-SWITCH(
-    TRUE(),
-    [Question] = "They are good looking", "Looks",
-    [Question] = "They have a personality I like", "Personality",
-    [Question] = "They have a sense of humour I like", "Sense of Humour",
-    [Question] = "They are intelligent", "Intelligent",
-    [Question] = "They make decent money", "Wealthy",
-    [Question] = "They have similar interests to me", "Similar Interest"
-)
-```
+- If value = *They are good looking* → **Looks**  
+- If value = *They have a personality I like* → **Personality**  
+- If value = *They have a sense of humour I like* → **Sense of Humour**  
+- If value = *They are intelligent* → **Intelligent**  
+- If value = *They make decent money* → **Wealthy**  
+- If value = *They have similar interests to me* → **Similar Interest**  
 
 ## 2. Rank Text Transformation
 - Split **Rank Text** column by delimiter `"space"` to isolate ranking words (First, Second, … Sixth)  
